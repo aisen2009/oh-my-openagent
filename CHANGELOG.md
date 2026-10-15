@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+**`omo update` authenticates its GitHub release lookup.** The standalone updater uses `GH_TOKEN`, falling back to `GITHUB_TOKEN`, when configured, so an exhausted anonymous API quota no longer blocks release lookup for authenticated requests. ([#10124](https://github.com/code-yeongyu/oh-my-openagent/issues/10124))
+
 **`omo app-server` is retired.** The Codex app-server protocol is gone from the engine, so omo no longer forwards `omo app-server`: it exits with status 2 and points to `omo --mode rpc` or `omo host`, which are the supported ways to drive a session from another program. `omo doctor`, the ulw-loop skill and the task status view no longer mention it. ([#10033](https://github.com/code-yeongyu/oh-my-openagent/issues/10033), [#10098](https://github.com/code-yeongyu/oh-my-openagent/pull/10098))
 
 ## [5.1.33] - 2026-10-13
